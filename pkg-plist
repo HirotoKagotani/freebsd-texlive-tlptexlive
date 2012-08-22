@@ -1,0 +1,8 @@
+@comment $FreeBSD$
+bin/platex
+bin/pxdvi
+bin/pxdvi-xaw
+bin/pdvitomp
+bin/uplatex
+share/texmf/xdvi/pxdvi.cfg
+share/texmf/xdvi/xdvi-ptex.sample
