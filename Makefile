@@ -80,7 +80,7 @@ pre-patch:
 	cd ${WRKSRC}; ${PATCH} -d texk/pxdvik -p1 < ${WRKDIR}/build-tlptexlive/pxdvik-20111126-density.diff
 	cd ${WRKSRC}; ${PATCH} -d texk/pxdvik -p1 < ${WRKDIR}/build-tlptexlive/pxdvik-20111212-uptex.diff
 	cd ${WRKSRC}; ${REINPLACE_CMD} -E 's/# (AUX_MODULES \+= otvalid)/\1/' libs/freetype2/freetype-2.4.9/modules.cfg
-	cd ${WRKSRC}; s=`${ECHO_CMD} "s/xdvik/xdvik\\"; ${ECHO_CMD} pxdvik/`; ${REINPLACE_CMD} -e "$$s" m4/kpse-pkgs.m4
+	cd ${WRKSRC}; s=`${ECHO_CMD} 's/xdvik/xdvik\\'; ${ECHO_CMD} pxdvik/`; ${REINPLACE_CMD} -e "$$s" m4/kpse-pkgs.m4
 
 	cd ${WRKSRC}; ${PATCH} -d texk -p0 < ${WRKDIR}/build-tlptexlive/pmpost-20120415-tl11.diff
 	cd ${WRKSRC}; ${PATCH} -d texk -p0 < ${WRKDIR}/build-tlptexlive/pmpost-svg-20120119-tl11.diff
