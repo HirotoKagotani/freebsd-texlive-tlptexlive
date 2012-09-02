@@ -1,9 +1,4 @@
-# New ports collection makefile for:	texlive
-# Date created:		2012-08-21
-# Whom:			Hiroto Kagotani <hiroto.kagotani@gmail.com>
-#
 # $FreeBSD$
-#
 
 PORTNAME=	texlive-tlptexlive
 PORTVERSION=	20120628.20120415
