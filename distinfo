@@ -1,4 +1,4 @@
 SHA256 (texlive-20120628-source.tar.xz) = 24e52edf808fc9ce052a67c7a75766a37e50428a5d454d533204033dd732065b
 SIZE (texlive-20120628-source.tar.xz) = 131920292
-SHA256 (build-tlptexlive-latest.zip) = d526bfed483dd33c043922b4143c399fb6d91b300a28d173578b86170f7856d2
-SIZE (build-tlptexlive-latest.zip) = 386149
+SHA256 (build-tlptexlive-20120507.zip) = d526bfed483dd33c043922b4143c399fb6d91b300a28d173578b86170f7856d2
+SIZE (build-tlptexlive-20120507.zip) = 386149

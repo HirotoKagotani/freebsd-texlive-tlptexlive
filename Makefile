@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	texlive-tlptexlive
-PORTVERSION=	20120628.20120415
+PORTVERSION=	20120628.20120507
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN}:ctan \
 		http://www.logic.at/people/preining/:tlptexlive
 MASTER_SITE_SUBDIR=	systems/texlive/Source:ctan .:tlptexlive
 DISTNAME=	texlive-${PORTVERSION:C/\..*//}-source
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:ctan \
-		build-tlptexlive-latest.zip:tlptexlive
+		build-tlptexlive-20120507.zip:tlptexlive
 
 MAINTAINER=	hiroto.kagotani@gmail.com
 COMMENT=	Japanized binaries for TeXLive distribution
