@@ -15,7 +15,8 @@ COMMENT=	Japanized binaries for TeXLive distribution
 
 EXTRACT_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
 BUILD_DEPENDS=	mktexlsr:${PORTSDIR}/print/texlive-core
-RUN_DEPENDS=	mktexlsr:${PORTSDIR}/print/texlive-core
+RUN_DEPENDS=	mktexlsr:${PORTSDIR}/print/texlive-core \
+		${LOCALBASE}/share/texmf/fonts/map/dvipdfmx/updmap/kanjix.map:${PORTSDIR}/print/texlive-dvipdfmx
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		freetype:${PORTSDIR}/print/freetype2 \
 		Xaw:${PORTSDIR}/x11-toolkits/libXaw
