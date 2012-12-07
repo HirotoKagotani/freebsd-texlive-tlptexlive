@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	texlive-tlptexlive
-PORTVERSION=	20120628.20120507
+PORTVERSION=	20120628.20121107
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN}:ctan \
 		http://www.logic.at/people/preining/:tlptexlive
 MASTER_SITE_SUBDIR=	systems/texlive/Source:ctan .:tlptexlive
 DISTNAME=	texlive-${PORTVERSION:C/\..*//}-source
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:ctan \
-		build-tlptexlive-20120507.zip:tlptexlive
+		build-tlptexlive-20121107.zip:tlptexlive
 
 MAINTAINER=	hiroto.kagotani@gmail.com
 COMMENT=	Japanized binaries for TeXLive distribution
@@ -78,7 +78,7 @@ pre-patch:
 	cd ${WRKSRC}; ${REINPLACE_CMD} -E 's/# (AUX_MODULES \+= otvalid)/\1/' libs/freetype2/freetype-2.4.9/modules.cfg
 	cd ${WRKSRC}; s=`${ECHO_CMD} 's/xdvik/xdvik\\'; ${ECHO_CMD} pxdvik/`; ${REINPLACE_CMD} -e "$$s" m4/kpse-pkgs.m4
 
-	cd ${WRKSRC}; ${PATCH} -d texk -p0 < ${WRKDIR}/build-tlptexlive/pmpost-20120415-tl11.diff
+	cd ${WRKSRC}; ${PATCH} -d texk -p0 < ${WRKDIR}/build-tlptexlive/pmpost-20121106-tl12.diff
 	cd ${WRKSRC}; ${PATCH} -d texk -p0 < ${WRKDIR}/build-tlptexlive/pmpost-svg-20120119-tl11.diff
 	cd ${WRKSRC}; ${REINPLACE_CMD} 's/ (TeX Live 2012)/" WEB2CVERSION "/' texk/web2c/pmplibdir/pmpost.ch
 
