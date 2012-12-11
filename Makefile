@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	texlive-tlptexlive
-PORTVERSION=	20120628.20121107
+PORTVERSION=	20120628.${PATCHVERSION}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN}:ctan \
 		http://www.logic.at/people/preining/:tlptexlive
 MASTER_SITE_SUBDIR=	systems/texlive/Source:ctan .:tlptexlive
 DISTNAME=	texlive-${PORTVERSION:C/\..*//}-source
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:ctan \
-		build-tlptexlive-20121107.zip:tlptexlive
+		build-tlptexlive-${PATCHVERSION}.zip:tlptexlive
 
 MAINTAINER=	hiroto.kagotani@gmail.com
 COMMENT=	Japanized binaries for TeXLive distribution
@@ -20,6 +20,7 @@ RUN_DEPENDS=	mktexlsr:${PORTSDIR}/print/texlive-core \
 LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
 		freetype:${PORTSDIR}/print/freetype2 \
 		Xaw:${PORTSDIR}/x11-toolkits/libXaw
+PATCHVERSION=	20121107
 
 CFLAGS+=	-fPIC
 CONFIGURE_ARGS=	--bindir=${PREFIX}/bin \
@@ -68,7 +69,7 @@ USE_XZ=		yes
 USE_AUTOTOOLS=	autoconf
 
 post-extract:
-	cd ${WRKDIR}; ${UNZIP_CMD} -q ${DISTDIR}/build-tlptexlive-latest.zip
+	cd ${WRKDIR}; ${UNZIP_CMD} -q ${DISTDIR}/build-tlptexlive-${PATCHVERSION}.zip
 
 pre-patch:
 	cd ${WRKSRC}; ${CP} -pR texk/xdvik texk/pxdvik
